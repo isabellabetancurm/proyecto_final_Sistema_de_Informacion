@@ -6,31 +6,36 @@ aplicando los conceptos de Programación Orientada a Objetos (POO).
 
 ---
 
-## 🗂️ Estructura del proyecto
+## 📂 Estructura del Proyecto
 
-biblioteca/
-├── modelos/
-│   ├── libros/
-│   │   ├── libro.py                  # Clase madre
-│   │   ├── literatura_cientifica.py  # Herencia
-│   │   ├── literatura_academica.py   # Herencia
-│   │   ├── literatura_infantil.py    # Herencia
-│   │   ├── novela.py                 # Herencia
-│   │   ├── comic.py                  # Herencia
-│   │   ├── poesia.py                 # Herencia
-│   │   └── bibliografia_artistica.py # Herencia
-│   ├── usuario.py
-│   └── empleado.py
-├── servicios/
-│   ├── catalogo.py
-│   ├── prestamo.py
-│   └── gestion_empleados.py
-├── excepciones/
-│   ├── validaciones.py
-│   └── excepciones.py
-└── main.py
-
----
+```bash
+proyecto_final_Sistema_de_Informacion/
+│
+└── biblioteca/
+    ├── modelos/
+    │   ├── libros/
+    │   │   ├── libro.py
+    │   │   ├── literatura_cientifica.py
+    │   │   ├── literatura_academica.py
+    │   │   ├── literatura_infantil.py
+    │   │   ├── novela.py
+    │   │   ├── comic.py
+    │   │   ├── poesia.py
+    │   │   └── bibliografia_artistica.py
+    │   ├── usuario.py
+    │   └── empleado.py
+    │
+    ├── servicios/
+    │   ├── catalogo.py
+    │   ├── prestamo.py
+    │   └── gestion_empleados.py
+    │
+    ├── excepciones/
+    │   ├── validaciones.py
+    │   └── excepciones.py
+    │
+    └── main.py
+```
 
 ## 🧠 Conceptos aplicados
 
