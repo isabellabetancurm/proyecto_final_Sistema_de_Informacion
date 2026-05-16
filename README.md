@@ -62,6 +62,13 @@ proyecto_final_Sistema_de_Informacion/
 python main.py
 
 ---
+## 📝 Notas de Desarrollo
+* El código sigue los estándares de la asignatura de **Programación I**.
+* Se utiliza **Programación Orientada a Objetos (POO)**.
+* Se cumplen todos los requisitos del proyecto final.
+
+---
+*Facultad de Ingeniería - Universidad de Manizales*
 
 ## 👤 Autora
 **Isabella Betancur**
