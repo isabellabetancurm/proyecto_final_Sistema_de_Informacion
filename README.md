@@ -67,8 +67,9 @@ proyecto_final_Sistema_de_Informacion/
 - ⚠️ Manejo de errores con excepciones personalizadas
 - ✅ Validación de datos de entrada
 
+
  ## 🖥️ Vista del sistema
-<img width="387" height="326" alt="screenshot png" src="https://github.com/user-attachments/assets/7309e6d3-528a-4f48-99a5-a75ba54b3783" />
+                 <img width="387" height="326" alt="screenshot png" src="https://github.com/user-attachments/assets/7309e6d3-528a-4f48-99a5-a75ba54b3783" />
 
 
 ## ▶️ Cómo ejecutar
