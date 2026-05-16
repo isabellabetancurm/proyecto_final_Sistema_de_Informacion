@@ -1,6 +1,6 @@
 #composición: Catálogo contiene una lista de libros
 #el catálogo es el corazón de la biblioteca
-class Catálogo:
+class Catalogo:
 
     #método constructor
     def __init__(self):

@@ -1,5 +1,5 @@
 #composición: Préstamo une a un usuario con un libro y registra quien tiene prestado que libro y en que fecha
-class Préstamo:
+class Prestamo:
 
     #método constructor: se ejecuta automáticamente al crear un objeto y obliga a que el prestamo siempre tenga usuario, libro y fecha desde el principio
     def __init__(self, usuario, libro, fecha_prestamo: str):

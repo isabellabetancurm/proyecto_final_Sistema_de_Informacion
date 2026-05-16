@@ -1,4 +1,4 @@
-from libro import Libro
+from modelos.libros.libro import Libro
 
 #herencia: literatura_infantil hereda todos los atributos y métodos de Libro
 #literatura_infantil es la clase hija, Libro es la clase madre

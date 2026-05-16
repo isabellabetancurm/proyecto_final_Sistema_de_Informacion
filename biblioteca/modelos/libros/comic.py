@@ -1,8 +1,8 @@
-from libro import Libro
+from modelos.libros.libro import Libro
 
 #herencia: Cómic hereda todos los atributos y métodos de Libro
 #Cómic es la clase hija, Libro es la clase madre
-class Cómic (Libro):
+class Comic(Libro):
 
     #método constructor
     def __init__(self, titulo: str, autor: str, año: int, editorial: str, numero_edicion: int):

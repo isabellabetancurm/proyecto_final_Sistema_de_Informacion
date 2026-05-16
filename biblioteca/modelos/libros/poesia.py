@@ -1,8 +1,8 @@
-from libro import Libro
+from modelos.libros.libro import Libro
 
 #herencia: Poesía hereda todos los atributos y métodos de Libro
 #Poesía es la clase hija, Libro es la clase madre
-class Poesía (Libro):
+class Poesia(Libro):
 
     #método constructor
     def __init__(self, titulo: str, autor: str, año: int, estilo: str, num_poemas: int):
