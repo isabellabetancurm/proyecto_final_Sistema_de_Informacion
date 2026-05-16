@@ -5,6 +5,13 @@ Sistema de gestión para una biblioteca municipal desarrollado en Python,
 aplicando los conceptos de Programación Orientada a Objetos (POO).
 
 ---
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Estado](https://img.shields.io/badge/Estado-Completo-green)
+![POO](https://img.shields.io/badge/POO-Aplicada-purple)
+![Universidad](https://img.shields.io/badge/Universidad-Manizales-red)
+![Materia](https://img.shields.io/badge/Materia-Programacion_I-orange)
+
+---
 
 ## 📂 Estructura del Proyecto
 
