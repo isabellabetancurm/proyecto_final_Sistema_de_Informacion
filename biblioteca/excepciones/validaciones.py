@@ -58,3 +58,40 @@ def validar_numero(mensaje):
             print("-> Error: Debe ser un número mayor a 0.")
         except ValueError:
             print("-> Error: Debe ser un número entero.")
+
+            #función para validar que la cedula tenga 10 digitos
+def validar_cedula(mensaje):
+    """Valida que la cedula tenga exactamente 10 digitos."""
+    while True:
+        valor = input(mensaje).strip()
+        if valor.isdigit() and len(valor) == 10:
+            return valor
+        print("-> Error: La cedula debe tener exactamente 10 digitos.")
+
+#función para validar que el telefono tenga 10 digitos
+def validar_telefono(mensaje):
+    """Valida que el telefono tenga exactamente 10 digitos."""
+    while True:
+        valor = input(mensaje).strip()
+        if valor.isdigit() and len(valor) == 10:
+            return valor
+        print("-> Error: El telefono debe tener exactamente 10 digitos.")
+
+#función para validar que el nombre tenga al menos dos palabras
+def validar_nombre(mensaje):
+    """Valida que el nombre tenga nombre y apellido."""
+    while True:
+        valor = input(mensaje).strip()
+        if len(valor.split()) >= 2:
+            return valor
+        print("-> Error: Ingrese nombre y apellido completos.")
+
+#función para validar que la direccion sea real
+def validar_direccion(mensaje):
+    """Valida que la direccion contenga calle, carrera, avenida, etc."""
+    while True:
+        valor = input(mensaje).strip().lower()
+        if "calle" in valor or "carrera" in valor or "avenida" in valor or "diagonal" in valor or "transversal" in valor:
+            return valor.title()
+        print("-> Error: Ingrese una direccion valida (Calle, Carrera, Avenida, etc).")
+        

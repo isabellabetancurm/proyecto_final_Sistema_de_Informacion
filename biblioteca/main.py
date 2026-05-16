@@ -13,7 +13,7 @@ from servicios.catalogo import Catalogo
 from servicios.prestamo import Prestamo
 from servicios.gestion_empleados import GestionEmpleados
 from excepciones.excepciones import LibroNoDisponibleError, LibroNoEncontradoError, UsuarioNoEncontradoError
-from excepciones.validaciones import validar_entrada, validar_año, validar_edad, validar_salario, validar_numero
+from excepciones.validaciones import validar_entrada, validar_año, validar_edad, validar_salario, validar_numero, validar_cedula, validar_telefono, validar_nombre, validar_direccion
 
 # ═══════════════════════════════════════════════════════════
 #  PARTE 1: DEMOSTRACIÓN DEL SISTEMA CON DATOS FIJOS
@@ -45,7 +45,7 @@ usuario2 = Usuario("Carlos Perez",   "1023456789", 30, "3109876543", "Carrera 8 
 empleado1 = Empleado("Laura Martinez", "1056789012", "3207654321", 2_500_000)
 
 # ───────────────────────────────────────────
-# composición: el catalogo contiene libros
+# composicion: el catalogo contiene libros
 # ───────────────────────────────────────────
 print("\n--- Composicion: catalogo de libros ---")
 catalogo = Catalogo()
@@ -64,7 +64,7 @@ print("\n--- Polimorfismo: mostrar_info() en cada tipo de libro ---")
 catalogo.mostrar_catalogo()
 
 # ───────────────────────────────────────────
-# composición: gestion de empleados
+# composicion: gestion de empleados
 # ───────────────────────────────────────────
 print("\n--- Composicion: gestion de empleados ---")
 gestion = GestionEmpleados()
@@ -72,7 +72,7 @@ gestion.agregar_empleado(empleado1)
 gestion.mostrar_empleados()
 
 # ───────────────────────────────────────────
-# composición: prestamo une usuario con libro
+# composicion: prestamo une usuario con libro
 # ───────────────────────────────────────────
 print("\n--- Composicion: registro de prestamo ---")
 libro4.prestar()
@@ -85,12 +85,14 @@ prestamo1.mostrar_info()
 # ───────────────────────────────────────────
 print("\n--- Excepciones: manejo de errores ---")
 try:
+    #intentamos prestar un libro que ya esta prestado
     if(not libro4.get_disponible()):
         raise LibroNoDisponibleError(f'"{libro4.get_titulo()}" ya esta prestado.')
 except LibroNoDisponibleError as e:
     print(f'-> Error capturado: {e.mensaje}')
 
 try:
+    #intentamos buscar un libro que no existe en el catalogo
     libro_buscado = catalogo.buscar_libro("Harry Potter")
     if(libro_buscado is None):
         raise LibroNoEncontradoError('"Harry Potter" no esta en el catalogo.')
@@ -167,7 +169,7 @@ while(opcion != "8"):
             print(f'-> Error: {e.mensaje}')
 
     elif(opcion == "4"):
-        #registrar devolucion
+        #registrar devolucion de un libro prestado
         titulo = validar_entrada("Ingrese el titulo del libro a devolver: ")
         fecha  = validar_entrada("Ingrese la fecha de devolucion (dd/mm/aaaa): ")
         for prestamo in prestamos:
@@ -177,19 +179,19 @@ while(opcion != "8"):
                 break
 
     elif(opcion == "5"):
-        #registrar nuevo usuario
+        #registrar nuevo usuario con validaciones
         print("\n── Registrar nuevo usuario ──")
-        nombre    = validar_entrada("Nombre completo : ")
-        cedula    = validar_entrada("Cedula          : ")
+        nombre    = validar_nombre("Nombre completo : ")
+        cedula    = validar_cedula("Cedula          : ")
         edad      = validar_edad("Edad            : ")
-        telefono  = validar_entrada("Telefono        : ")
-        direccion = validar_entrada("Direccion       : ")
+        telefono  = validar_telefono("Telefono        : ")
+        direccion = validar_direccion("Direccion       : ")
         nuevo_usuario = Usuario(nombre, cedula, edad, telefono, direccion)
         usuarios.append(nuevo_usuario)
         print(f'Usuario "{nombre}" registrado exitosamente.')
 
     elif(opcion == "6"):
-        #ver info de usuario
+        #ver informacion de un usuario registrado
         print("\nUsuarios registrados:")
         for i, u in enumerate(usuarios):
             print(f'  {i+1}. {u.get_nombre()}')
@@ -197,10 +199,11 @@ while(opcion != "8"):
         usuarios[idx].mostrar_info()
 
     elif(opcion == "7"):
-        #ver empleados
+        #ver todos los empleados registrados
         gestion.mostrar_empleados()
 
     elif(opcion == "8"):
+        #salir del sistema
         print("\nHasta pronto. Gracias por usar el Sistema de la Biblioteca.\n")
 
     else:
