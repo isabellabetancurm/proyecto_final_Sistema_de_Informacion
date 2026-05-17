@@ -67,7 +67,11 @@ El sistema está compuesto por tres módulos principales:
 ### 🔍 Buscar Libro
 ![Buscar libro](biblioteca/Capturas_app/buscar_libro.png)
 
+
+## 🌐 Aplicación en línea
+👉 **[Abrir aplicación](https://proyectofinalsistemadeinformacion-z9bx7h6cw4zqkysjtgbzhb.streamlit.app/)**
 ---
+
 
 ## 4. 📂 Estructura del Proyecto
 
