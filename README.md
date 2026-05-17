@@ -1,5 +1,5 @@
 # 📚 Sistema de Información — Biblioteca Municipal
-**Programación I — Grupo 2 — Cohorte 261**
+**Proyecto final: Sistema de información**
 
 Sistema de gestión para una biblioteca municipal desarrollado en Python, 
 aplicando los conceptos de Programación Orientada a Objetos (POO).
