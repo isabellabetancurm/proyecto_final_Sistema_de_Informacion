@@ -115,7 +115,9 @@ def mostrar_menu():
     print("║  5. Registrar usuario                ║")
     print("║  6. Ver info de usuario              ║")
     print("║  7. Ver empleados                    ║")
-    print("║  8. Salir                            ║")
+    print("║  8. Agregar libro al catalogo        ║")
+    print("║  9. Ver prestamos activos            ║")
+    print("║  10. Salir                           ║")
     print("╚══════════════════════════════════════╝")
     print("Elige una opcion: ", end="")
 
@@ -123,11 +125,9 @@ def mostrar_menu():
 prestamos = [prestamo1]
 usuarios  = [usuario1, usuario2]
 
-opcion = ""
-while(opcion != "8"):
-
+while True:
     mostrar_menu()
-    opcion = input()
+    opcion = input().strip()
 
     if(opcion == "1"):
         #ver catalogo completo
@@ -203,9 +203,71 @@ while(opcion != "8"):
         gestion.mostrar_empleados()
 
     elif(opcion == "8"):
+        #agregar nuevo libro al catalogo
+        print("\n── Agregar nuevo libro ──")
+        print("Categorias disponibles:")
+        print("  1. Literatura Cientifica")
+        print("  2. Literatura Academica")
+        print("  3. Literatura Infantil")
+        print("  4. Novela")
+        print("  5. Comic")
+        print("  6. Poesia")
+        print("  7. Bibliografia Artistica")
+        categoria = input("Elige la categoria: ")
+        titulo = validar_entrada("Titulo  : ")
+        autor  = validar_entrada("Autor   : ")
+        año    = validar_año("Año     : ")
+
+        if(categoria == "1"):
+            area   = validar_entrada("Area de ciencia : ")
+            nivel  = validar_entrada("Nivel (basico/intermedio/avanzado): ")
+            nuevo_libro = literatura_cientifica(titulo, autor, año, area, nivel)
+        elif(categoria == "2"):
+            materia = validar_entrada("Materia : ")
+            nivel   = validar_entrada("Nivel educativo (bachillerato/universidad/posgrado): ")
+            nuevo_libro = literatura_academica(titulo, autor, año, materia, nivel)
+        elif(categoria == "3"):
+            edad      = validar_edad("Edad recomendada: ")
+            ilustrado = input("Es ilustrado? (s/n): ").lower() == "s"
+            nuevo_libro = literatura_infantil(titulo, autor, año, edad, ilustrado)
+        elif(categoria == "4"):
+            subgenero   = validar_entrada("Subgenero (thriller/drama/historica/aventura): ")
+            num_paginas = validar_numero("Numero de paginas: ")
+            nuevo_libro = Novela(titulo, autor, año, subgenero, num_paginas)
+        elif(categoria == "5"):
+            editorial      = validar_entrada("Editorial : ")
+            numero_edicion = validar_numero("Numero de edicion: ")
+            nuevo_libro = Comic(titulo, autor, año, editorial, numero_edicion)
+        elif(categoria == "6"):
+            estilo     = validar_entrada("Estilo (clasica/contemporanea/romantica): ")
+            num_poemas = validar_numero("Numero de poemas: ")
+            nuevo_libro = Poesia(titulo, autor, año, estilo, num_poemas)
+        elif(categoria == "7"):
+            tipo_arte = validar_entrada("Tipo de arte (pintura/fotografia/escultura): ")
+            tecnica   = validar_entrada("Tecnica (acuarela/oleo/digital): ")
+            nuevo_libro = Bibliografia_artistica(titulo, autor, año, tipo_arte, tecnica)
+        else:
+            print("-> Categoria no valida.")
+            nuevo_libro = None
+
+        if(nuevo_libro is not None):
+            catalogo.agregar_libro(nuevo_libro)
+
+    elif(opcion == "9"):
+        #ver todos los prestamos activos
+        print("\n=== Prestamos activos ===")
+        activos = [p for p in prestamos if p.get_fecha_devolucion() is None]
+        if(len(activos) > 0):
+            for p in activos:
+                p.mostrar_info()
+                print("---")
+        else:
+            print("No hay prestamos activos.")
+
+    elif(opcion == "10"):
         #salir del sistema
         print("\nHasta pronto. Gracias por usar el Sistema de la Biblioteca.\n")
+        break
 
     else:
-        print("\n-> Opcion no valida. Elige entre 1 y 8.")
-        
+        print("\n-> Opcion no valida. Elige entre 1 y 10.")
