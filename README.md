@@ -12,6 +12,37 @@ aplicando los conceptos de Programación Orientada a Objetos (POO).
 ![Asignatura](https://img.shields.io/badge/Materia-Programacion_I-orange)
 
 ---
+## 🖥️ Vista de la Aplicación
+
+### 🏠 Inicio
+![Inicio](biblioteca/Capturas_app/inicio.png)
+
+### 📖 Catálogo de Libros
+![Catalogo](biblioteca/Capturas_app/catalogo.png)
+
+### ➕ Agregar Libro
+![Agregar libro](biblioteca/Capturas_app/agregar_libro.png)
+
+### 🔄 Registrar Préstamo
+![Prestamo](biblioteca/Capturas_app/prestamo.png)
+
+### ↩️ Registrar Devolución
+![Devolucion](biblioteca/Capturas_app/devolucion.png)
+
+### 📋 Préstamos Activos
+![Prestamos activos](biblioteca/Capturas_app/prestamos_activos.png)
+
+### 👤 Registrar Usuario
+![Registrar usuario](biblioteca/Capturas_app/registrar_usuario.png)
+
+### 👥 Ver Usuarios
+![Ver usuarios](biblioteca/Capturas_app/ver_usuarios.png)
+
+### 👷 Ver Empleados
+![Ver empleados](biblioteca/Capturas_app/ver_empleados.png)
+
+### 🔍 Buscar Libro
+![Buscar libro](biblioteca/Capturas_app/buscar_libro.png)
 
 ## 📂 Estructura del Proyecto
 
