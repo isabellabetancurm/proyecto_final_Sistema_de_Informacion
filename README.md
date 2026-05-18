@@ -43,6 +43,9 @@ El sistema está compuesto por tres módulos principales:
 ### 📖 Catálogo de Libros
 ![Catalogo](biblioteca/Capturas_app/catalogo.png)
 
+### 🔍 Buscar Libro
+![Buscar libro](biblioteca/Capturas_app/buscar_libro.png)
+
 ### ➕ Agregar Libro
 ![Agregar libro](biblioteca/Capturas_app/agregar_libro.png)
 
@@ -64,8 +67,6 @@ El sistema está compuesto por tres módulos principales:
 ### 👷 Ver Empleados
 ![Ver empleados](biblioteca/Capturas_app/ver_empleados.png)
 
-### 🔍 Buscar Libro
-![Buscar libro](biblioteca/Capturas_app/buscar_libro.png)
 
 
 ## 🌐 Aplicación en línea
